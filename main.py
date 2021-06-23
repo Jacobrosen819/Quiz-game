@@ -9,13 +9,25 @@ importing sqlite 3 in order to keep scores in a database
 import sqlite3
 #class for game
 class quiz:
-  def __init__ (self, bank, questions, list_of_questions):
+  def __init__ (self, bank, correct_answers, wrong_answers, questions, list_of_questions):
     bank = self.bank
+    correct_answers = self.correct_answers
+    wrong_answers = self.wrong_answers
     questions = self.questions
     list_of_questions = self.list_of_questions
+  def bank_value():
+    bank = 0 
+    return bank
   def quiz(bank):
-    question_1 = input
+    question_1 = input("Which animal features in the logo for Lamborghini?").lower()
+    if question_1 == "bull" or question_1 == "a bull":
+      bank += random.randint(10, 75)
+      response = "CORRECT.\n You now have " + str(bank)
+  def questions_randomizer(questions):
+    pass
 
+
+"""
 #Title welocme to the game
 print("Welcome to the car quiz!!!\n ")
 #asking if they want to play
@@ -30,3 +42,4 @@ if playing == "yes" or playing == "y" or playing == "yea" or playing == "yeah":
 
 else:
   quit()
+"""

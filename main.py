@@ -18,12 +18,29 @@ class quiz:
   def bank_value():
     bank = 0 
     return bank
-  def quiz(bank):
-    question_1 = input("Which animal features in the logo for Lamborghini?").lower()
-    if question_1 == "bull" or question_1 == "a bull":
-      bank += random.randint(10, 75)
-      response = "CORRECT.\n You now have " + str(bank)
+  def quiz(bank, correct_answers, wrong_answers):
+    def question_1():
+      question_1 = input("Which animal features in the logo for Lamborghini?").lower()
+      if question_1 == "bull" or question_1 == "a bull":
+        correct_answers += 1
+        bank += random.randint(10, 75)
+        response = "CORRECT.\n You now have " + str(bank) + " in your bank"
+      else:
+        wrong_answers += 1
+        response = "CORRECT.\n You now have " + str(bank) + " in your bank"
+      return bank and correct_answers and wrong_answers
+    def question_1():
+      question_1 = input("Which animal features in the logo for Lamborghini?").lower()
+      if question_1 == "bull" or question_1 == "a bull":
+        correct_answers += 1
+        bank += random.randint(10, 75)
+        response = "CORRECT.\n You now have " + str(bank) + " in your bank"
+      else:
+        wrong_answers += 1
+        response = "CORRECT.\n You now have " + str(bank) + " in your bank"
+      return bank and correct_answers and wrong_answers
   def questions_randomizer(questions):
+
     pass
 
 
